@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 @Component
 public class EntityDtoMapper {
-    public  UserDto mapUserToDtoBasic(User user) {
+    public UserDto mapUserToDtoBasic(User user) {
         UserDto userDTO = new UserDto();
         userDTO.setId(user.getId());
         userDTO.setEmail(user.getEmail());
@@ -20,7 +20,7 @@ public class EntityDtoMapper {
         userDTO.setProfile_picture(user.getProfile_picture());
         return userDTO;
     }
-    public  ChatDto mapChatToDtoBasic(Chat chat) {
+    public ChatDto mapChatToDtoBasic(Chat chat) {
         ChatDto chatDto = new ChatDto();
         chatDto.setId(chat.getId());
         chatDto.setChat_name(chat.getChat_name());
@@ -29,7 +29,7 @@ public class EntityDtoMapper {
         chatDto.setCreatedBy(mapUserToDtoBasic(chat.getCreatedBy()));
         return chatDto;
     }
-    public  UserChatDto mapUserChatToDtoBasic(UserChat userChat) {
+    public UserChatDto mapUserChatToDtoBasic(UserChat userChat) {
         UserChatDto userChatDto = new UserChatDto();
         userChatDto.setId(userChat.getId());
         userChatDto.setAdmin(userChat.isAdmin());
@@ -37,14 +37,14 @@ public class EntityDtoMapper {
         userChatDto.setUser(mapUserToDtoBasic(userChat.getUser()));
         return userChatDto;
     }
-    public  MessageDto mapMessageToDtoBasic(Message message) {
+    public MessageDto mapMessageToDtoBasic(Message message) {
         MessageDto messageDto = new MessageDto();
         messageDto.setId(message.getId());
         messageDto.setTimestamp(message.getTimestamp());
         messageDto.setContent(message.getContent());
         return messageDto;
     }
-    public  UserMessageDto mapUserMessageToDtoBasic(UserMessage userMessage) {
+    public UserMessageDto mapUserMessageToDtoBasic(UserMessage userMessage) {
         UserMessageDto userMessageDto = new UserMessageDto();
         userMessageDto.setId(userMessage.getId());
         userMessageDto.setMessage(mapMessageToDtoBasic(userMessage.getMessage()));

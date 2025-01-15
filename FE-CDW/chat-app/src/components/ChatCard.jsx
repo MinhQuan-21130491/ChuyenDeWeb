@@ -3,7 +3,7 @@ import { FaCircle } from "react-icons/fa";
 
 export default function ChatCard() {
   return (
-    <div className='px-3 pb-2 cursor-pointerw-full'>
+    <div className='px-3 pb-2 cursor-pointerw-full cursor-pointer'>
         {/* Line separator */}
         <div className='border-t border-gray-300 mb-2 w-full'></div>
         <div className='flex justify-between items-center w-full'>
@@ -15,7 +15,7 @@ export default function ChatCard() {
                 <div className='w-full hidden md:block'>
                      <p className='text-md'>Chip</p>
                      <div className='w-[100%] flex justify-between'>
-                        <div className='w-[70%]'>
+                        <div className='w-[65%]'>
                             <p className='text-xs text-gray-400 text-ellipsis overflow-hidden whitespace-nowrap'>messagemessagemessagemessadasaddddddddddddsdasdsadsasdadassadsadsasdsdsdsaagemessagemessagemessagemessage...</p>
                          </div>
                          <div className='w-[30%] flex space-x-1 items-center'>
